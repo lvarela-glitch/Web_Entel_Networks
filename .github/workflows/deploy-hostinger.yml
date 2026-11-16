@@ -1,4 +1,4 @@
-name: Publicar sitio Entel en Hostinger
+name: Publicar sitio Entel en Hostinger (staging)
 
 on:
   push:
@@ -9,13 +9,12 @@ permissions:
   contents: read
 
 concurrency:
-  group: hostinger-production
+  group: hostinger-staging
   cancel-in-progress: false
 
 jobs:
   deploy:
-    if: vars.HOSTINGER_DEPLOY_ENABLED == 'true'
-    name: Publicar por FTPS
+    name: Publicar por FTPS en sitio temporal
     runs-on: ubuntu-latest
     environment: production
     steps:
