@@ -1,0 +1,77 @@
+:root {
+  --entel-dark: #020032;
+  --entel-blue: #03076A;
+  --entel-vivid: #1D02AA;
+  --entel-gray: #F3F4F6;
+  --entel-gray-dark: #DCE1E1;
+  --ink: #15153b;
+  --muted: #696b80;
+  --line: #e5e6ed;
+  --white: #fff;
+  --display: "Neue Machina", "Arial", sans-serif;
+  --body: "ProN W4", "TT Norms Pro", Arial, sans-serif;
+  --utility: "Andale Mono", monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--entel-dark); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.topbar { min-height: 78px; width: 100%; padding: 13px max(5vw, 24px); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,.13); color: #fff; }
+.brand-lockup { display: flex; align-items: center; gap: 16px; }
+.mazalife-logo { width: 112px; height: 44px; object-fit: contain; }
+.brand-divider { display: block; height: 32px; width: 1px; background: rgba(255,255,255,.35); }
+.entel-logo { width: 126px; height: auto; object-fit: contain; background: #fff; border-radius: 5px; padding: 4px 6px; }
+.topbar-label { font-size: 13px; letter-spacing: .04em; color: #d9d9e8; }
+.page-shell { width: min(900px, calc(100% - 40px)); margin: 0 auto; padding: 62px 0 30px; }
+.intro { color: #fff; margin: 0 0 30px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 17px; color: #d5d3ff; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; font-family: var(--utility); }
+.eyebrow-dot { width: 8px; height: 8px; background: #8b7cff; border-radius: 50%; box-shadow: 0 0 0 4px rgba(139,124,255,.17); }
+h1,h2 { font-family: var(--display); }
+h1 { font-size: clamp(34px, 5vw, 48px); line-height: 1.12; letter-spacing: -.035em; margin: 0; font-weight: 750; }
+h1 span { background: linear-gradient(100deg, #7d72ff 4%, #c2baff 90%); color: transparent; background-clip: text; -webkit-background-clip: text; }
+.intro-copy { color: #d2d1e0; font-size: 17px; max-width: 660px; margin: 20px 0 17px; }
+.intro-meta { color: #b9b8cc; display: flex; align-items: center; gap: 9px; font-size: 13px; }
+.clock-icon { font-size: 18px; line-height: 1; }.meta-separator { color: #74738c; margin: 0 2px; }
+.form-card { background: var(--white); border-radius: 18px; box-shadow: 0 24px 70px rgba(0,0,0,.2); overflow: hidden; }
+.form-section { padding: 30px 36px 32px; border-bottom: 1px solid var(--line); }
+.section-heading { display: flex; gap: 15px; align-items: flex-start; margin-bottom: 22px; }
+.section-index { color: var(--entel-vivid); font-family: var(--display); font-size: 13px; letter-spacing: .04em; font-weight: 700; padding-top: 4px; font-family: var(--utility); }
+h2 { font-size: 21px; line-height: 1.25; margin: 0 0 4px; color: var(--entel-dark); letter-spacing: -.015em; }
+.section-heading p { margin: 0; color: var(--muted); font-size: 14px; }
+.grid { display: grid; gap: 16px; }.contact-grid { grid-template-columns: 1fr 1fr; margin-left: 31px; }
+.field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.field > span, .choice-fieldset legend { font-size: 14px; color: #292943; font-weight: 650; }
+i { font-style: normal; color: #9d2154; }
+input:not([type=checkbox]) { min-width: 0; width: 100%; height: 46px; padding: 0 13px; border: 1px solid #d9dbe5; border-radius: 8px; color: var(--ink); background: #fff; font: inherit; font-size: 15px; outline: none; transition: border-color .15s, box-shadow .15s; }
+input::placeholder { color: #a0a1af; }
+input:focus { border-color: #5542d7; box-shadow: 0 0 0 3px rgba(29,2,170,.1); }
+.choice-fieldset { border: 0; padding: 0; margin: 22px 0 0 31px; min-width: 0; }
+.choice-fieldset legend { padding: 0; margin-bottom: 10px; }
+.choice-fieldset legend small { color: #858696; font-weight: 400; font-size: 12px; margin-left: 5px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; cursor: pointer; }.chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chip span { display: block; padding: 7px 12px; border: 1px solid #dedfea; border-radius: 999px; color: #494a63; font-size: 13px; line-height: 1.3; transition: background .15s, color .15s, border-color .15s; }
+.chip input:checked + span { color: var(--entel-blue); background: #f0efff; border-color: #8a7de8; }
+.chip input:focus-visible + span { outline: 3px solid rgba(29,2,170,.2); outline-offset: 2px; }
+.goals-fieldset { margin-top: 20px; }
+.metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-left: 31px; }
+.metric-field > span { min-height: 42px; line-height: 1.35; }
+.input-unit { display: flex; align-items: center; position: relative; }
+.input-unit input { padding-right: 75px; appearance: textfield; }.input-unit input::-webkit-inner-spin-button,.input-unit input::-webkit-outer-spin-button { appearance: none; margin: 0; }
+.input-unit > span { position: absolute; right: 12px; color: #8c8d9b; font-size: 12px; pointer-events: none; }
+.season-field { margin: 18px 0 0 31px; max-width: 620px; }
+.privacy-note { margin: 22px 36px 0; padding: 13px 15px; background: #f7f7fb; border: 1px solid #ececf2; border-radius: 9px; display: flex; gap: 11px; align-items: flex-start; }
+.privacy-icon { color: var(--entel-vivid); font-size: 17px; line-height: 1.4; }.privacy-note p { margin: 0; color: #66677a; font-size: 13px; }
+.form-actions { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 36px 28px; }
+.required-note { margin: 0; color: #77798b; font-size: 13px; }.required-note i { margin-right: 2px; }
+.submit-button { min-height: 48px; padding: 0 18px 0 20px; border: 0; border-radius: 8px; background: linear-gradient(105deg, var(--entel-blue), var(--entel-vivid)); color: #fff; font: inherit; font-weight: 700; display: flex; gap: 17px; align-items: center; cursor: pointer; transition: background .15s, transform .15s; }
+.submit-button:hover { background: var(--entel-vivid); transform: translateY(-1px); }.submit-button:disabled { opacity: .65; cursor: wait; transform: none; }
+.button-mark { font-size: 19px; }.form-message { display: none; margin: 0 36px 25px; padding: 12px 14px; border-radius: 8px; font-size: 14px; }.form-message.visible { display: block; }.form-message.success { background: #edf8f1; color: #17683b; }.form-message.error { background: #fff0f1; color: #8c1d2c; }
+.honeypot { position: absolute !important; left: -10000px !important; height: 1px !important; width: 1px !important; }
+.page-footer { display: flex; gap: 10px; align-items: center; justify-content: center; color: #b1b0c4; font-size: 13px; padding: 23px 0 0; }.page-footer strong { color: #fff; font-weight: 700; }.footer-dot { width: 3px; height: 3px; border-radius: 50%; background: #77758e; }
+@media (max-width: 650px) {
+  .topbar { min-height: 68px; padding: 10px 18px; }.brand-lockup { gap: 10px; }.mazalife-logo { width: 88px; height: 36px; }.entel-logo { width: 104px; }.topbar-label { display: none; }
+  .page-shell { width: min(100% - 28px, 520px); padding: 39px 0 22px; }.intro { margin-bottom: 24px; }.eyebrow { font-size: 11px; margin-bottom: 13px; }h1 { font-size: clamp(32px, 9vw, 42px); }.intro-copy { font-size: 15px; margin: 16px 0 12px; }.intro-meta { align-items: flex-start; font-size: 12px; gap: 7px; flex-wrap: wrap; }
+  .form-card { border-radius: 13px; }.form-section { padding: 23px 18px 24px; }.section-heading { gap: 11px; margin-bottom: 18px; }.section-index { font-size: 12px; }h2 { font-size: 19px; }.section-heading p { font-size: 13px; }
+  .contact-grid,.metrics-grid { grid-template-columns: 1fr; gap: 13px; margin-left: 0; }.contact-grid { margin-top: 4px; }.choice-fieldset,.season-field { margin-left: 0; }.choice-fieldset { margin-top: 19px; }.choice-fieldset legend { line-height: 1.4; }.choice-fieldset legend small { display: block; margin-left: 0; margin-top: 1px; }.chips { gap: 7px; }.chip span { font-size: 12px; padding: 7px 10px; }
+  .metric-field > span { min-height: auto; }.metric-field { gap: 6px; }.input-unit input { height: 44px; }.season-field { margin-top: 15px; }
+  .privacy-note { margin: 18px 18px 0; padding: 11px 12px; }.privacy-note p { font-size: 12px; }.form-actions { padding: 18px 18px 22px; align-items: flex-start; flex-direction: column; }.submit-button { width: 100%; justify-content: space-between; }.form-message { margin: 0 18px 20px; }.page-footer { font-size: 11px; flex-wrap: wrap; }
+}
