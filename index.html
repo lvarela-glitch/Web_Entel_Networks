@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/entel-networks.png" type="image/png">
   <link rel="preconnect" href="https://mazalife.com.mx">
   <link rel="preconnect" href="https://yoizen.com">
-  <link rel="stylesheet" href="styles.css?v=20261124-2">
+  <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
   <script src="app.js" defer></script>
 </head>
@@ -53,7 +53,7 @@
           <div class="chat-compose"><span>Escribe un mensaje</span><i>＋</i><b>➤</b></div>
         </div>
         <div class="scene-badge badge-secure"><span>✓</span> Atención ágil, en un mismo lugar</div>
-        <div class="spin-mark" aria-hidden="true"><img src="assets/entel-networks.png" alt=""></div>
+        <div class="spin-mark" aria-hidden="true"><img src="https://entelcloud.com.mx/entel-link-mark-white.webp" alt=""></div>
         <div class="scene-spark spark-a">✦</div><div class="scene-spark spark-b">✧</div><div class="scene-spark spark-c">✦</div>
       </div>
     </section>
@@ -121,6 +121,38 @@
           <label class="field metric-field"><span>Agentes humanos para llamadas</span><div class="input-unit"><input name="voice_agents" type="number" min="0" step="1" inputmode="numeric" placeholder="Ej. 3"><span>agentes</span></div></label>
         </div>
         <label class="field season-field"><span>¿Hay meses o temporadas de mayor demanda?</span><input name="peak_season" placeholder="Opcional. Ej. Semana Santa, verano y diciembre" maxlength="180"></label>
+      </section>
+
+      <section class="form-section integration-section" aria-labelledby="integration-heading">
+        <div class="section-heading">
+          <span class="section-index">04</span>
+          <div><h2 id="integration-heading">Sistemas e integraciones</h2><p>Esto nos ayuda a identificar el alcance técnico de la solución.</p></div>
+        </div>
+        <fieldset class="choice-fieldset integration-fieldset">
+          <legend>¿Qué sistemas o aplicaciones usan y cuáles necesitarían conectarse con la solución? <small>Pueden seleccionar varias</small></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="systems_used" value="CRM"><span>CRM</span></label>
+            <label class="chip"><input type="checkbox" name="systems_used" value="Emisión o venta de boletos digitales"><span>Boletos digitales</span></label>
+            <label class="chip"><input type="checkbox" name="systems_used" value="Reservaciones"><span>Reservaciones</span></label>
+            <label class="chip"><input type="checkbox" name="systems_used" value="Pagos"><span>Pagos</span></label>
+            <label class="chip"><input type="checkbox" name="systems_used" value="Inventario"><span>Inventario</span></label>
+            <label class="chip"><input type="checkbox" name="systems_used" value="Otro"><span>Otro</span></label>
+            <label class="chip"><input type="checkbox" name="systems_used" value="No lo sabemos aún"><span>No lo sabemos aún</span></label>
+          </div>
+          <label class="field integration-detail"><span>Si conocen los nombres de las plataformas, indíquenlos</span><input name="systems_other" placeholder="Ej. Salesforce, sistema de boletaje o pasarela de pago" maxlength="300"></label>
+        </fieldset>
+        <fieldset class="choice-fieldset integration-fieldset action-fieldset">
+          <legend>¿Qué información o acción debería intercambiarse? <small>Pueden seleccionar varias</small></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="integration_actions" value="Consultar disponibilidad y precios"><span>Consultar disponibilidad y precios</span></label>
+            <label class="chip"><input type="checkbox" name="integration_actions" value="Iniciar o completar una compra"><span>Iniciar o completar una compra</span></label>
+            <label class="chip"><input type="checkbox" name="integration_actions" value="Emitir o enviar el boleto"><span>Emitir o enviar el boleto</span></label>
+            <label class="chip"><input type="checkbox" name="integration_actions" value="Consultar una reservación"><span>Consultar una reservación</span></label>
+            <label class="chip"><input type="checkbox" name="integration_actions" value="Registrar la interacción en el CRM"><span>Registrar la interacción en el CRM</span></label>
+            <label class="chip"><input type="checkbox" name="integration_actions" value="Otra acción"><span>Otra acción</span></label>
+          </div>
+          <label class="field integration-detail"><span>Si desean, describan brevemente otra necesidad</span><input name="integration_details" placeholder="Opcional" maxlength="500"></label>
+        </fieldset>
       </section>
 
       <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">▣</span><p>Usaremos estos datos únicamente para dimensionar la propuesta de atención de Mazalife. No incluyan datos personales de sus clientes.</p></div>
