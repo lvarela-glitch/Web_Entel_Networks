@@ -24,7 +24,7 @@
     data.systems_used = checkedValues('systems_used');
     data.integration_actions = checkedValues('integration_actions');
     data.submitted_at = new Date().toISOString();
-    data.form_version = 'mazalife-cx-v2';
+    data.form_version = 'mazalife-cx-v3';
 
     if (data.website) {
       form.reset();
