@@ -21,8 +21,10 @@
     const data = Object.fromEntries(new FormData(form).entries());
     data.attractions = checkedValues('attractions');
     data.bot_goals = checkedValues('bot_goals');
+    data.systems_used = checkedValues('systems_used');
+    data.integration_actions = checkedValues('integration_actions');
     data.submitted_at = new Date().toISOString();
-    data.form_version = 'mazalife-cx-v1';
+    data.form_version = 'mazalife-cx-v2';
 
     if (data.website) {
       form.reset();
